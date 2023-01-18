@@ -7,7 +7,7 @@ import Header from "./components/header/Header";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 import Routing from "./components/routing/Router";
-
+import { UserAuthContextProvider } from './context/UserAuthContext'
 import 'react-toastify/dist/ReactToastify.css';
 const router = createBrowserRouter([
   {
@@ -20,11 +20,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <UserAuthContextProvider>
     <ToastContainer />
 
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+<RouterProvider router={router}>
+  <App />
+</RouterProvider>
+    </UserAuthContextProvider>
   </React.StrictMode>
 );
 

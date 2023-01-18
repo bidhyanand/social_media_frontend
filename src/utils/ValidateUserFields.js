@@ -12,7 +12,7 @@ export function validateEmail(email) {
 // to validate the password field
 export function validatePassword(password) {
   if (
-   ! password === "" || password.length <=3 || password.length >= 10
+   ! password === "" || password.length <6 || password.length > 15
   ) {
     return false;
   }
