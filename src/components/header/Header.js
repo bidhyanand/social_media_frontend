@@ -13,7 +13,6 @@ const Header = () => {
     try {
       toast.success("Logged Out account");
       await logout();
-
     } catch (error) {
       toast.error(error.message);
     }
@@ -29,7 +28,7 @@ const Header = () => {
     >
       <div
         className="text-2xl font-bold italic cursor-pointer "
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/feeds")}
       >
         Social Media App
       </div>
@@ -61,22 +60,22 @@ const Header = () => {
         </>
       ) : path === "/signup" ? (
         <>
-          <div onClick={() => navigate("/login")} className="flex gap-20 cursor-pointer ">
+          <div
+            onClick={() => navigate("/login")}
+            className="flex gap-20 cursor-pointer "
+          >
             Login
           </div>
         </>
       ) : path === "/feeds" ? (
         <>
           <div
-            onClick={()=> navigate ('/feeds/post') }
+            onClick={() => navigate("/feeds/post")}
             className="flex gap-20 cursor-pointer "
           >
             Create Post
           </div>
-          <div
-            onClick={handleLogout}
-            className="flex gap-20 cursor-pointer "
-          >
+          <div onClick={handleLogout} className="flex gap-20 cursor-pointer ">
             Logout
           </div>
         </>

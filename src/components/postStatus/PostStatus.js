@@ -103,13 +103,13 @@ file&&uploadFile()
                     <label htmlFor="about" className="block text-sm font-medium text-gray-700">
                       What's on your mind ?
                     </label>
-                    <div className="mt-1">
+                    <div className="mt-3">
                       <textarea
                         id="about"
                         name="about"
                         rows={3}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        placeholder="you@example.com"
+                        placeholder="write something................"
                         defaultValue={''}
                         onChange={handleTextArea}
                       />
@@ -137,9 +137,9 @@ file&&uploadFile()
                   </div> */}
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">Cover photo</label>
+                    <label className="block text-sm font-medium text-gray-700">Profile picture</label>
                     <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6  ">
-                      <img src={imageURL} width={100} height={100} ></img>
+                      <img  src= {imageURL } width={100} height={100} ></img>
                       <div className="space-y-1 text-center">
                         <svg
                           className="mx-auto h-12 w-12 text-gray-400"
